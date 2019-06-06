@@ -104,14 +104,105 @@
 									<div class="desc">
 										<p class="meta">
 											<span class="cat"><a href="#">Read</a></span>
-											<span class="date">05 June 2019</span>
+											<span class="date">06 June 2019</span>
 											<span class="pos">By <a href="#">TheWickedDataScientist</a></span>
 										</p>
 										<h2><a href="blog.html">Hello World!</a></h2>
-										<p>This is a test and will soon be the first blog entry</p>
-										<blockquote>
-											Test
+										<h4><a href="blog.html">A bit of background and port forwarding for fast.ai's Lesson 1</a></h4>
+										<p>Welcome to <em>The Wicked Data Scientist</em>. As this is my first blog post, I decided to introduce
+										myself and the reason for this blog a little bit. As you can read in the <a href="about.html">about</a>
+									page of this blog, I am a bioinformatician and data scientist, working at the Telethon Kids Institute in Perth, Western Australia.
+								  You can read all about it on their <a href="telethonkids.org.au">website</a>. I probably have to say that all views and opinions on this site are mine and do not reflect any opinions etc of my employer, as this
+								is a private blog. The reason why I still mention my employer is, that my private interest and research interest are very tightly
+							interlinked. Research, especially in <a href="https://en.wikipedia.org/wiki/Personalized_medicine" targer="blank_">personalised medicine, <a href="https://en.wikipedia.org/wiki/Bioinformatics" target="blank_">bioinformatics</a> and genetics or other so called <em><a href="https://en.wikipedia.org/wiki/Omics", target="blank_">omics</a></em> fields is
+						relying on new methods in statistics, mathematics and machine learning, as the traditional way medical research is conducted is not always feasible for such big data sets. I have a background
+					in social sciences (sociology and psychology), public health and hold a PhD in human biology.
+				</p>
+
+					<p>During my PhD I was introduced to the exciting field of bioinformatics.
+				I started out with learning the programming language <a href="https://www.r-project.org" target="blank_">R</a> and developed my excitement and passion
+			for programming. I added html, css and a bit of python to the list of my languages and naturally got hooked in the field of machine learning. My Post-Doc
+			research evolves all around epigenetic and genetic data combined with the power of machine learning.
+					</p>
+
+						<p>About a year ago, I have started a project that involved so called <em>epigenetic</em> data (for those who want to know what epigenetics is about, click <a href="https://www.whatisepigenetics.com/fundamentals/">here</a>).
+						The results of this project will probably be published later this year. In this project, I utilised differrent types of machine learning
+					algorithms, such as random forest, elastic net regression, gradient boosting machine and support vector machine, to train a classification model based on epigenetic data. I will put a link to the paper in this post, once it is published.
+				During this project, however, I did not take advantage of the ever growing field of deep learning. As I primarily use the programming language R
+			for my analyses, I felt a bit "scared" to get into python at first. I know, everyone in the field says <a href="https://www.quora.com/Is-Python-an-easy-language-to-learn" target="blank_">how easy it is to learn</a>, but there are some concepts in R that are different to python and that you
+		need to overcome first, when starting python. But others have written extensively about python versus R or <a href"https://towardsdatascience.com/from-r-vs-python-to-r-and-python-aa25db33ce17" target="blank_">why not both?</a></p>
+		<p>Lucky enough Perth has a flourishing machine learning community and weekly meetups of the <a href="https://www.pmlg.org" target="blank_">Perth Machine Learning Group</a>. I started attending these meetups about 1.5 years ago and
+			it was a really good decision. The group supports the <em><a href="https://www.fast.ai" target="blank_">fast.ai</a></em> course by Jermey Howard et al., which I now finally decided to start.</p>
+
+										<p>The course is in its third version now and as per website and info material, the course utilises
+									the <a href="https://pytorch.org" target="blank_">PyTorch</a> library of the <a href="https://www.python.org" target="blank_">python</a> language which is primarily developed
+									by Facebook. On top of that, fast.ai has developed the fastai library, with the aim to <a href="https://www.fast.ai/about/"><cite>"mak[e] deep learning easier to use and [to] get[...] more people from all backgrounds involved"</a></cite>.
+								The setup and everything required for the course (even advanced setup) is explained very nicely on the <a href"https://course.fast.ai/start_aws.html" target="blank_">page</a>.
+								Hence, I am not going to talk about how to set up a AWS instance for example.</p>
+								<h1>How to connect to the jupyter notebook?</h1>
+								<blockquote><em>"... why can't I access the notebook remotely in the browser via port 8888?"</em>
+									</blockquote>
+							<p>Let's assume you have set up a cloud instance and cloned the fast.ai repository from github:
+										<blockquote style="background:black;">
+											<code style="background:black; color:white;">git clone https://github.com/fastai/course-v3</code>
 										</blockquote>
+										Further, you have updated conda and set up the conda environment for the course:
+										<blockquote style="background:black;">
+											<code style="background:black; color:white;">conda update conda</code><br></br>
+											<code style="background:black; color:white;">conda install -c pytorch -c fastai fastai pytorch torchvision cuda92</code>
+											</blockquote>
+											And you have changed the directory to the course directory:
+											<blockquote style="background:black;">
+												<code style="background:black; color:white;">cd course-v3/nbs/dl1</code>
+												</blockquote>
+												Now it is time to start up jupyter notebook, to access the course material. I am not running the course on AWS,
+												so my setup also involved
+												<ol>
+													<li>Install git (<code>sudo apt install git</code>)</li>
+													<li>Install conda</li>
+													<li>The question why the f*** I can't access the notebook remotely in the browser via port 8888!</li>
+											</ol>
+											I do not have a background in system administration, although I have some knowlege about unix and how to
+											set up, configure and access the <a href="https://www.rstudio.com/products/rstudio/download-server/" target="blank_">r-studio server.</a>
+											So If you are in the same situation as I was, where your remote terminal tells you the notebook is running, but you can't access it in the browser,
+											here is what you can do without going into detailed configurations: use port forwarding. </p>
+											<p> First of all, if your notebook is still running in the terminal <code> Ctrl + C</code> to stop it.
+												Now, you have to start jupyter without browser on the remote instance. You can also use <code>nohup</code>, which allows you to
+												exit the terminal without shutting down the jupiter notebook (which is what we will be doing here. If you don't want this, because you leave your
+												terminal window open anyways, just leave the <code>nohup</code> command out):
+												<blockquote style="background:black;">
+													<code style="background:black; color:white;">nohup jupyter notebook --no-browser &</code>
+													</blockquote>
+													Now, you open a new terminal window on your <em>local machine</em> and type the following:
+													<blockquote style="background:black;">
+														<code style="background:black; color:white;">ssh -i KEY -nNT -L 9999:localhost:8888 YOUR-HOST-NAME@XXX.XXX.XXX.XXX</code>
+														</blockquote>
+														I have added the <code>-i KEY</code> as you will probably have generated a key pair to access your cloud, so you need to
+														point to that when accessing the port forwarding. If not, leave it out and you should get a prompt for the password to access
+														the cloud (not recommended).
+												</p>
+												<p>Now you open a browser and type in <code>localhost:9999</code>. You probably see the following now:
+													<img src="images/jupyter.png" class="img-responsive" alt="">
+													Jupyter prompts you for an access token. This is a way to secure your connection. To get your access token,
+													you will have to go back to the cloud terminal and type the following (it is best to establish a second remote connection in another
+													terminal window, so you make sure the jupyter notebook process is not exited):
+													<blockquote style="background:black;">
+														<code style="background:black; color:white;">jupyter notebook list
+														</code>
+														</blockquote>
+														You will get an output like this:
+														<blockquote style="background:black;">
+															<code style="background:black; color:white;">http://localhost:8888/?token=TOKEN
+															</code>
+															</blockquote>
+															Copy the <code>TOKEN</code> part (after the <em>token=""</em>), and paste it into the <em>Password or token</em> field in the
+																jupyter notebook browser window. Et voila, you have established a connection to your jupyter notebook on the remote host, via ssh tunnelling and port forwarding.
+										</p>
+										<p> I hope this was useful. If you do not want to go through the hassle of setting up your own cloud instance (although I would recommend this at one stage, because you learn a lot!)
+											You can also access the whole fast.ai content on <a href="https://course.fast.ai/start_kaggle.html" target="blank_">kaggle</a>
+										</p>
+										<p>Thank you for reading, and until next time, your <br></br> Wicked Data Scientist
+										</p>
 									</div>
 								</div>
 							</div>
@@ -146,7 +237,7 @@
 									</a>
 									<div class="desc">
 										<h3><a href="blog.html">Hello World!</a></h3>
-										<p class="admin"><span>05 June 2019</span></p>
+										<p class="admin"><span>06 June 2019</span></p>
 									</div>
 								</div>
 							</div>
