@@ -1,6 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141601318-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141601318-1');
+</script>
+
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>TheWickedDataScientist</title>
@@ -51,6 +62,8 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<!--For the progress bar style "I am good at"-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	</head>
 	<body>
@@ -67,11 +80,11 @@
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li><a href="index.html">Home</a></li>
+								<li class="active"><a href="index.html">Home</a></li>
 								<li>
 									<a href="blog.html">Blog</a>
 								</li>
-								<li class="active"><a href="about.html">About Me</a></li>
+								<li><a href="about.html">About Me</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</div>
@@ -94,9 +107,32 @@
 		<div id="colorlib-container">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6" style="font-family: 'Roboto', sans-serif;!important">
 						<img class="img-responsive" src="images/me.jpg" alt="">
+						<p style="text-align:center"><h4 style="text-align:center; color:grey;">My skills:</h4></p>
+  			<div>
+    	<div style="width:90%; background:tomato!important; text-align:center; color:white;">90%</div>
+  	</div>
+		<p><i class="fa fa-calculator"></i> Data Analytics/ Quantitative Methods</p>
+  	<div>
+    	<div style="width:80%; background:tomato!important; text-align:center; color:white;">80%</div>
+  	</div>
+		<p><i class="fa fa-laptop"></i> R, R-Studio</p>
+  	<div>
+    	<div style="width:75%; background:tomato!important; text-align:center; color:white;">75%</div>
+  	</div>
+		<p><i class="fa fa-laptop"></i> Bioinformatics / Data Science / Machine Learning</p>
+  	<div>
+    	<div style="width:70%;  background:tomato!important; text-align:center; color:white;">70%</div>
+  	</div>
+		<p><i class="fa fa-camera-retro"></i> Photography</p>
+  	<div>
+    	<div style="width:50%;  background:tomato!important; text-align:center; color:white;">50%</div>
+  	</div>
+		<p><i class="fa fa-laptop"></i> Python</p>
+
 					</div>
+
 					<div class="col-md-6">
 						<p>Hi! My Name is <strong>Seb</strong> Rauschert, and I am a Postdoc bioinformatician and data scientist at the
 							<a href="https://www.telethonkids.org.au" target="blank_">Telethon Kids Institute</a> in Perth, Western Australia.
@@ -108,6 +144,7 @@
 							studying deep learning (using the MOOC on fast.ai) to my first own application.</p>
 							<p>So this blog will be about my work as a bioinformatician and the journey to (hopefully) my own machine learning related
 							project.</p>
+							<p>As I really like photography and my Nikon <i class="fa fa-camera-retro"></i>, I will add some of the photos I take on my travels to this blog as well.</p>
 							<p>I hope I can do it with Einstein in mind:</p>
 						<blockquote>
 							If you can't explain it simply, you don't understand it well enough.
@@ -117,6 +154,7 @@
 								<li><a href="https://twitter.com/hobbes_sr" target="blank_"><i class="icon-twitter"></i></a></li>
 								<li><a href="https://www.linkedin.com/in/dr-sebastian-rauschert-836760a0/" target="blank_"><i class="icon-linkedin"></i></a></li>
 								<li><a href="https://www.github.com/Hobbeist" target="blank_"><i class="icon-github" target="blank_"></i></a></li>
+								<li><a href="https://www.instagram.com/Hobbeist/" target="blank_"><i class="icon-instagram" target="blank_"></i></a></li>
 
 							</ul>
 						</p>
@@ -140,10 +178,21 @@
 							</ul>
 						</p>
 					</div>
+
 					<div class="col-md-3">
-						<h2>Recent Post</h2>
+						<h2>Recent Posts</h2>
+
 						<div class="f-blog">
-							<a href="blog.html" class="blog-img" style="background-image: url(images/Castle.jpg);">
+							<a href="blog2.html" class="blog-img" style="background-image: url(images/Main.jpg);">
+							</a>
+							<div class="desc">
+								<h3><a href="blog2.html">Fast.ai: Lesson 1</a></h3>
+								<p class="admin"><span>07 June 2019</span></p>
+							</div>
+						</div>
+
+						<div class="f-blog">
+							<a href="single.html" class="blog-img" style="background-image: url(images/Castle.jpg);">
 							</a>
 							<div class="desc">
 								<h3><a href="single.html">Hello World!</a></h3>
@@ -151,6 +200,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-md-3">
 						<h2>Archive</h2>
 						<p>

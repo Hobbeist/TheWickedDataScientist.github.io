@@ -1,6 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141601318-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141601318-1');
+</script>
+
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>TheWickedDataScientist</title>
@@ -168,7 +179,7 @@
 											here is what you can do without going into detailed configurations: use port forwarding. </p>
 											<p> First of all, if your notebook is still running in the terminal <code> Ctrl + C</code> to stop it.
 												Now, you have to start jupyter without browser on the remote instance. You can also use <code>nohup</code>, which allows you to
-												exit the terminal without shutting down the jupiter notebook (which is what we will be doing here. If you don't want this, because you leave your
+												exit the terminal without shutting down the jupyter notebook (which is what we will be doing here. If you don't want this, because you leave your
 												terminal window open anyways, just leave the <code>nohup</code> command out):
 												<blockquote style="background:black;">
 													<code style="background:black; color:white;">nohup jupyter notebook --no-browser &</code>
@@ -233,6 +244,15 @@
 							<div class="side">
 								<h2 class="sidebar-heading">Recent Blog</h2>
 								<div class="f-blog">
+									<a href="blog.html" class="blog-img" style="background-image: url(images/Main.jpg);">
+									</a>
+									<div class="desc">
+										<h3><a href="blog.html">Fast.ai: Lesson 1</a></h3>
+										<p class="admin"><span>07 June 2019</span></p>
+									</div>
+								</div>
+
+								<div class="f-blog">
 									<a href="blog.html" class="blog-img" style="background-image: url(images/Castle.jpg);">
 									</a>
 									<div class="desc">
@@ -261,14 +281,25 @@
 							</ul>
 						</p>
 					</div>
+
 					<div class="col-md-3">
-						<h2>Recent Post</h2>
+						<h2>Recent Posts</h2>
+
 						<div class="f-blog">
-							<a href="blog.html" class="blog-img" style="background-image: url(images/Castle.jpg);">
+							<a href="blog2.html" class="blog-img" style="background-image: url(images/Main.jpg);">
+							</a>
+							<div class="desc">
+								<h3><a href="blog2.html">Fast.ai: Lesson 1</a></h3>
+								<p class="admin"><span>07 June 2019</span></p>
+							</div>
+						</div>
+
+						<div class="f-blog">
+							<a href="single.html" class="blog-img" style="background-image: url(images/Castle.jpg);">
 							</a>
 							<div class="desc">
 								<h3><a href="single.html">Hello World!</a></h3>
-								<p class="admin"><span>05 June 2019</span></p>
+								<p class="admin"><span>06 June 2019</span></p>
 							</div>
 						</div>
 					</div>
